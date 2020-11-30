@@ -1,0 +1,11 @@
+version: "3.6"
+
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - "./app:/app:ro"
+    ports:
+      - "80:80"
+    entrypoint: /start-reload.sh

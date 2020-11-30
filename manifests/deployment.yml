@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+        image: olssonr/demo:v0.0.1
+        name: demo
+        ports:
+        - containerPort: 80
+        
+        
